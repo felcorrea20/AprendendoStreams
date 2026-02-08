@@ -5,51 +5,51 @@ import java.util.stream.Collectors;
 
 public class Main2 {
     public static void main(String[] args) {
-//        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6);
-//        numeros.stream()
-//                .filter(n -> n % 2 == 0)
-//                .forEach(System.out::println);
-//
-//        List<String> palavras = Arrays.asList("java", "stream", "lambda");
-//        palavras.stream()
-//                .map(p -> p.toUpperCase())
-//                .forEach(System.out::println);
-//
-//        List<Integer> numeros2 = Arrays.asList(1, 2, 3, 4, 5, 6);
-//        List<Integer> listaNumeros = numeros2.stream()
-//                                                .filter(n -> n % 2 != 0)
-//                                                .map(n -> n * 2)
-//                                                .toList();
-//        listaNumeros.forEach(System.out::println);
-//
-//        List<String> frutas = Arrays.asList("apple", "banana", "apple", "orange", "banana");
-//        frutas.stream()
-//                .distinct()
-//                .forEach(System.out::println);
-//
-//        List<List<Integer>> listaDeNumeros = Arrays.asList(
-//                Arrays.asList(1, 2, 3, 4),
-//                Arrays.asList(5, 6, 7, 8),
-//                Arrays.asList(9, 10, 11, 12)
-//        );
-//
-//        List<Integer> listaDeNumerosFiltrada = listaDeNumeros.stream()
-//                .flatMap(List::stream)
-//                .filter(Main2::ehPrimo)
-//                .sorted()
-//                .collect(Collectors.toList());
-//
-//        System.out.println(listaDeNumerosFiltrada);
-//
-//        List<Pessoa> pessoas = Arrays.asList(
-//                new Pessoa("Alice", 22),
-//                new Pessoa("Bob", 17),
-//                new Pessoa("Charlie", 19)
-//        );
-//
-//        pessoas.stream()
-//                .filter(p -> p.getIdade() > 18)
-//                .forEach(p -> System.out.println(p.getNome()));
+        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6);
+        numeros.stream()
+                .filter(n -> n % 2 == 0)
+                .forEach(System.out::println);
+
+        List<String> palavras = Arrays.asList("java", "stream", "lambda");
+        palavras.stream()
+                .map(p -> p.toUpperCase())
+                .forEach(System.out::println);
+
+        List<Integer> numeros2 = Arrays.asList(1, 2, 3, 4, 5, 6);
+        List<Integer> listaNumeros = numeros2.stream()
+                                                .filter(n -> n % 2 != 0)
+                                                .map(n -> n * 2)
+                                                .toList();
+        listaNumeros.forEach(System.out::println);
+
+        List<String> frutas = Arrays.asList("apple", "banana", "apple", "orange", "banana");
+        frutas.stream()
+                .distinct()
+                .forEach(System.out::println);
+
+        List<List<Integer>> listaDeNumeros = Arrays.asList(
+                Arrays.asList(1, 2, 3, 4),
+                Arrays.asList(5, 6, 7, 8),
+                Arrays.asList(9, 10, 11, 12)
+        );
+
+        List<Integer> listaDeNumerosFiltrada = listaDeNumeros.stream()
+                .flatMap(List::stream)
+                .filter(Main2::ehPrimo)
+                .sorted()
+                .collect(Collectors.toList());
+
+        System.out.println(listaDeNumerosFiltrada);
+
+        List<Pessoa> pessoas = Arrays.asList(
+                new Pessoa("Alice", 22),
+                new Pessoa("Bob", 17),
+                new Pessoa("Charlie", 19)
+        );
+
+        pessoas.stream()
+                .filter(p -> p.getIdade() > 18)
+                .forEach(p -> System.out.println(p.getNome()));
 
         List<Produto> produtos = Arrays.asList(
                 new Produto("Smartphone", 800.0, "Eletrônicos"),
